@@ -1,0 +1,113 @@
+<!doctype html><html><head><style type="text/css">#sidebar {
+  width: 30%;
+  background-color: steelblue;
+  color: pink;
+  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  border-radius: 2%;
+}
+#main {
+  margin-left:35%;
+}
+.container {
+  background-color: lightgray;
+  border-radius: 1%;
+  padding-left: 5px;
+}
+.box {
+  border: solid;
+  border-radius: 5%;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+}
+#zorblax {
+  background-color: steelblue;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+}
+#sunville {
+  background-color: yellow;
+  width: 50px;
+  height: 70px;
+  border-radius: 50%;
+}
+#MoonSun {
+  background-color: rgb(148, 148, 91);
+  width: 15px;
+  height: 15px;
+  border-radius: 35%;
+}</style></head><body><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Autocomplete - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<div id="sidebar">
+	<h2>Interplanetary</h2>
+	<h3>Travel Guide</h3>
+</div>
+<div id="main">
+		<div class="container">
+			<div class="box">
+				<h3>Zorblax</h3>
+				<div id="zorblax"></div>
+			</div>
+			<div class="info">
+				<p>The planet Zorblax is the only inhabited planet in the Antares Star System.
+					Zorblaxians are peaceful and have a very scientific culture. They can be rude
+					to strangers and travellers who do not bother to learn their language. Most major
+					cities are in Zorblax's southern hemisphere, while the north is the primary source of                     agriculture.
+				</p>
+				<p>We recommend travelling between November and March, when the crowds are lowest.
+					Late winter offers the best deals on starflights and lodging.You muust visit the
+					Museum of Squid-Monster Fossils. Situated in downtown Canto, this is the one place to go if your
+					time on Zorblax is limited.
+				</p>
+		<div class="container" id="sunville-anchor">
+			<div class="box">
+			<h3>Sunville</h3>
+			<div id="sunville"></div>
+			</div>
+			<div class="info">
+				<p>The planet Sunville, is  a planet where the sun goes to sleep for two hours. The day is 18 hours long. 
+					Sunvillians only sleep for four hours and are awake for 14 hours. There are Sunvillians who can stay awake 
+					for days at a time. The max amount of days that they can go without sleep is 4 days. in order to get to this planet you must go through
+					the sun, your rocket must be covered in water in order for you to go through it safely.</p>
+					<p>The sun of Sunville is the size of Dodgers stadium. The planet is the size of the Dodgers and  the Raiders stadiums combined. 
+						Theefore it is a tiny planet. There is a population of 1,500. The best time to visit is during hurricane season, because if you get caught in 
+						a hurricane it will take you high up to see the surrounding planets.</p>
+					</div>
+						<div class="container" id="moonsun-anchor">
+							<div class="box">
+								<h3>MoonSun</h3>
+								<div id="MoonSun"></div>
+								</div>
+								<div class="info">
+					<p>The planet MoonSun, get their light from a sphere that is half moon half sun. They coexist at the same time. The days are 36 hours long. 12 hours only the sun is awake, the other 12 hours only the 
+					moon is awake. For the last 12 hours both the sun and the moon are awake. There is nothing fun to do on this planet. 
+					Only the people who live on this planet find fun in their way of living. It is very common for them to find fun in throwing things at the sun and moon.
+					</p>
+					<p>This is th perfect planet to relax in. As there is nothing to do here. They have a lot of pools and mountains. For fun you could relax by the pool 
+						or you could go climb a mountain. This planet has the perfect weather, since there is equal darkness and light. To relax here on MoonSun book your flight 
+						through the stars.</p><script type="text/javascript">var jsonData = [
+  {
+    "label": "Zorblax",
+    "the_link": "#zorblax-anchor"
+  }, {
+    "label": "#Sunville",
+    "the_link": "#sunville-anchor"
+  }, {
+    "label": "moonsun",
+    "the_link": "#MoonSun-anchor"
+  }];
+$("#search").autocomplete({
+source: jsonData,
+select: function search (event, ui) {
+  window.location.href = ui.item.the_link
+}
+});</script></body><html>
